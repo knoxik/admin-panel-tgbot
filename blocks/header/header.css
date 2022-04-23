@@ -1,0 +1,114 @@
+.header {
+  border: solid 1px red;
+  width: calc(100% - 96px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.header__logo {
+  width: 80px;
+  height: 80px;
+}
+
+.header__menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__links {
+  margin-right: 35px;
+}
+
+.header__links:last-child {
+  margin-right: 0px;
+}
+
+.header__link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.header__theme-toggle {
+
+}
+
+.header__toggle {
+  display: none;
+}
+
+.header__btn-toggle {
+  display: inline-block;
+  width: 60px;
+  height: 25px;
+  background-color: #46474b;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.header__btn-toggle::after {
+  content: '';
+  width: 32px;
+  height: 32px;
+  background-color: #e03c3c;
+  background-image: url(../../images/sun.svg);
+  background-size: 19px;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  border: 2px solid #232222;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+  position: absolute;
+  top: -6px;
+  left: 0;
+  display: grid;
+  place-content: center;
+  line-height: 0;
+  transition: background-color 1s, transform 1s ease-in;
+
+}
+
+.header__toggle:checked + .header__btn-toggle::after {
+  content: '';
+  background-color: #1f257f;
+  border: 2px solid #fff;
+  background-image: url(../../images/moon.svg);
+  transform: translateX(25px) rotate(360deg);
+}
+
+.header__toggle:checked + .header__btn-toggle {
+  background-color: rgb(184, 184, 184);
+}
+
+
+@media screen and (max-width: 760px) {
+  .header {
+    width: calc(100% - 32px);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__menu {
+    flex-direction: column;
+    margin-top: 40px;
+
+  }
+
+  .header__links {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+}

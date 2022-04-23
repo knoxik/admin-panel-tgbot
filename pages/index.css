@@ -1,0 +1,25 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/header/header.css);
+
+.div {
+  border: solid 1px red;
+}
+
+.page {
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: normal;
+  background-color: #191a1c;
+  color: white;
+  max-width: 1440px;
+  min-width: 320px;
+  margin: 0 auto;
+  transition: background-color 1s, color 1s;
+}
+
+.page_theme_light {
+  background-color: white;
+  color: black;
+}
+
+
