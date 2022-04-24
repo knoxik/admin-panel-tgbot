@@ -1,7 +1,8 @@
 .header {
-  border: solid 1px red;
+  /* border: solid 1px red; */
   width: calc(100% - 96px);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
@@ -88,27 +89,84 @@
   background-color: rgb(184, 184, 184);
 }
 
+#header__burger-input, .header__burger {
+  display: none;
+  cursor: pointer;
+}
+
 
 @media screen and (max-width: 760px) {
   .header {
     width: calc(100% - 32px);
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    position: relative;
+    margin-top: 20px;
   }
 
   .header__logo {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    align-self: flex-start;
   }
 
   .header__menu {
     flex-direction: column;
-    margin-top: 40px;
-
+    align-items: center;
+    background-color: var(--mobileMenuColor);
   }
+
+  .header__theme-toggle {
+    background-color: var(--mobileMenuColor);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* .header__theme-toggle {
+    visibility: hidden;
+    max-height: 0;
+  } */
 
   .header__links {
     margin-right: 0;
     margin-bottom: 16px;
+  }
+
+  .header__burger {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .burger-btn {
+    background-color: unset;
+    border: 0;
+  }
+
+  .line {
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: var(--mainTextColor);
+    margin-block: 10px;
+    border-radius: 4px;
+  }
+
+  #header__burger-input ~ .header__menu, #header__burger-input ~ .header__theme-toggle {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    width: 100%;
+    transition: visibility .5s, opacity .5s, max-height .5s, padding-top .5s;
+  }
+
+  #header__burger-input:checked ~ .header__menu, #header__burger-input:checked ~ .header__theme-toggle {
+    visibility: visible;
+    opacity: 1;
+    max-height: 100%;
+    padding-top: 20px;
+    transition: visibility .5s, opacity .5s, max-height .5s, padding-top .5s;
   }
 }

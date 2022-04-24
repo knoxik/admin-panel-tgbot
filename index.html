@@ -10,13 +10,20 @@
 <body class="page">
   <header class="header">
     <img class="header__logo" src="./images/header-logo.svg" alt="">
-    <nav>
-      <ul class="header__menu">
-        <li class="header__links"><a class="header__link" href="#">Профиль</a></li>
-        <li class="header__links"><a class="header__link" href="#">Рассылка</a></li>
-        <li class="header__links"><a class="header__link" href="#">Статистика</a></li>
-      </ul>
-    </nav>
+
+    <input type="checkbox" id="header__burger-input">
+    <label for="header__burger-input" class="header__burger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </label>
+
+    <ul class="header__menu">
+      <li class="header__links"><a class="header__link" href="#">Профиль</a></li>
+      <li class="header__links"><a class="header__link" href="#">Рассылка</a></li>
+      <li class="header__links"><a class="header__link" href="#">Статистика</a></li>
+    </ul>
+
     <div class="header__theme-toggle">
       <input type="checkbox" class="header__toggle"  id="toggle" checked>
       <label for="toggle" class="header__btn-toggle"></label>

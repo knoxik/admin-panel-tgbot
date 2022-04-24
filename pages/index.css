@@ -2,15 +2,20 @@
 @import url(../vendor/fonts.css);
 @import url(../blocks/header/header.css);
 
-.div {
+
+/* .div {
   border: solid 1px red;
-}
+} */
 
 .page {
+  --mainTextColor: white;
+  --mainBackgroundColor: black;
+  --mobileMenuColor: #222;
+
   font-family: 'Inter', Arial, sans-serif;
   font-weight: normal;
-  background-color: #191a1c;
-  color: white;
+  background-color: var(--mainBackgroundColor);
+  color: var(--mainTextColor);
   max-width: 1440px;
   min-width: 320px;
   margin: 0 auto;
@@ -18,8 +23,9 @@
 }
 
 .page_theme_light {
-  background-color: white;
-  color: black;
+  --mainTextColor: black;
+  --mainBackgroundColor: white;
+  --mobileMenuColor: rgb(199, 199, 199);
+  background-color: var(--mainBackgroundColor);
+  color: var(--mainTextColor);
 }
-
-
