@@ -29,3 +29,131 @@
   background-color: var(--mainBackgroundColor);
   color: var(--mainTextColor);
 }
+
+.posts {
+  padding: 0 48px;
+  margin-top: 100px;
+}
+
+.posts_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.posts__title {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.posts__btn {
+  background-color: #0070D2;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  border: 0;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.new-post-menu {
+  max-width: 700px;
+  border: 1px #222 solid;
+  margin-top: 0;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: visibility .5s, opacity .5s, height .5s, margin-top .5s;
+  /* background-color: var(--mobileMenuColor); */
+}
+
+.new-post__btn {
+  margin-top: 20px;
+  display: block;
+  background-color: #0070D2;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 20px;
+  border: 0;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.new-post-menu_active {
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  margin-top: 30px;
+  transition: visibility .5s, opacity .5s, height .5s, margin-top .5s;
+}
+
+.new-post__text {
+  max-width: 700px;
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.post {
+  margin-top: 50px;
+}
+
+.post__info {
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  display: flex;
+  padding: 15px 10px;
+}
+
+.post__date {
+  margin: 0 30px 0 0;
+}
+
+.post__send-count {
+  margin: 0;
+}
+
+.post__card {
+  margin: 20px 0 0 8px;
+  border: 1px solid #222;
+  max-width: 300px;
+}
+
+.post__header {
+  display: flex;
+  justify-content: space-between;
+  background-color: green;
+  padding: 5px 10px
+}
+
+.post__time {
+  margin: 0 10px 0 0;
+  color: var(--mainTextColor)
+}
+
+.post__status {
+  margin: 0;
+  color: var(--mainTextColor)
+}
+
+.post__content {
+  background-color: var(--mobileMenuColor);
+  padding: 10px 10px;
+}
+
+.post__bot-name {
+  margin: 0;
+  font-size: 12px;
+  color: rgb(210, 210, 210);
+}
+
+.post__text {
+  margin: 10px 0 0 0;
+  color: var(--mainTextColor)
+}

@@ -29,6 +29,99 @@
       <label for="toggle" class="header__btn-toggle"></label>
     </div>
   </header>
+
+  <section class="posts">
+    <div class="posts_wrapper">
+      <h2 class="posts__title">Постинг</h2>
+      <button class="posts__btn" type="button">Новый пост</button>
+    </div>
+
+    <div class="new-post-menu">
+      <form class="form" id="newPost">
+        <textarea class="new-post__text" maxlength="4096" rows="6" cols="66" name="text" placeholder="Введите текст поста..." required></textarea>
+
+        <div class="new-post__datetime">
+          <label>Дата и время отправки</label>
+          <input class="new-post__date" type="date">
+          <input class="new-post__time" type="time">
+          <label>Отправить сейчас</label>
+          <input class="new-post__send-now" type="checkbox">
+        </div>
+
+
+        <div>
+        <label>От кого</label>
+        <select class="new-post__from">
+          <option value="">bot1</option>
+          <option value="">bot2</option>
+          <option value="">bot3</option>
+        </select>
+
+        <label>Куда</label>
+        <select class="new-post__to">
+          <option value="">bot1</option>
+          <option value="">bot2</option>
+          <option value="">bot3</option>
+        </select>
+      </div>
+
+      <input class="new-post__image" type="file">
+
+      <button class="new-post__btn" type="submit">Отправить</button>
+      </form>
+    </div>
+
+    <div class="post">
+      <div class="post__info">
+        <p class="post__date">7 марта 2022</p>
+        <p class="post__send-count">Отправлено: 1</p>
+      </div>
+      <div class="post__card">
+        <div class="post__header">
+          <p class="post__time">18:41</p>
+          <p class="post__status">Отправлен</p>
+        </div>
+        <div class="post__content">
+          <p class="post__bot-name">Aviator_bot</p>
+          <p class="post__text">Текст поста текст поста текст поста текст поста текст поста текст поста</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="post__info">
+        <p class="post__date">7 марта 2022</p>
+        <p class="post__send-count">Отправлено: 1</p>
+      </div>
+      <div class="post__card">
+        <div class="post__header">
+          <p class="post__time">18:41</p>
+          <p class="post__status">Отправлен</p>
+        </div>
+        <div class="post__content">
+          <p class="post__bot-name">Aviator_bot</p>
+          <p class="post__text">Текст поста текст поста текст поста текст поста текст поста текст поста</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="post__info">
+        <p class="post__date">7 марта 2022</p>
+        <p class="post__send-count">Отправлено: 1</p>
+      </div>
+      <div class="post__card">
+        <div class="post__header">
+          <p class="post__time">18:41</p>
+          <p class="post__status">Отправлен</p>
+        </div>
+        <div class="post__content">
+          <p class="post__bot-name">Aviator_bot</p>
+          <p class="post__text">Текст поста текст поста текст поста текст поста текст поста текст поста</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <script src="./scripts/script.js"></script>
 </body>
 </html>
