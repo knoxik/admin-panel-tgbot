@@ -98,6 +98,7 @@
   line-height: 1.5;
   border-radius: 5px;
   border: 1px solid #ccc;
+  min-width: 550px;
 }
 
 .post {
@@ -156,4 +157,14 @@
 .post__text {
   margin: 10px 0 0 0;
   color: var(--mainTextColor)
+}
+
+@media screen and (max-width: 760px) {
+  .posts {
+    padding: 0 16px;
+  }
+
+  .new-post__text {
+    min-width: 300px;
+  }
 }
